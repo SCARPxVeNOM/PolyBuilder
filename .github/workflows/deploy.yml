@@ -1,0 +1,153 @@
+name: Deploy Smart Contracts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'contracts/**'
+      - 'scripts/**'
+      - 'hardhat.config.ts'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'contracts/**'
+      - 'scripts/**'
+  workflow_dispatch:
+    inputs:
+      network:
+        description: 'Network to deploy to'
+        required: true
+        default: 'mumbai'
+        type: choice
+        options:
+          - mumbai
+          - amoy
+          - polygon
+
+jobs:
+  compile:
+    name: Compile Contracts
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Compile contracts
+        run: npx hardhat compile
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: contract-artifacts
+          path: artifacts/
+
+  test:
+    name: Test Contracts
+    runs-on: ubuntu-latest
+    needs: compile
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: contract-artifacts
+          path: artifacts/
+
+      - name: Run tests
+        run: npx hardhat test
+
+  deploy-testnet:
+    name: Deploy to Testnet
+    runs-on: ubuntu-latest
+    needs: [compile, test]
+    if: github.event_name == 'workflow_dispatch' && (github.event.inputs.network == 'mumbai' || github.event.inputs.network == 'amoy')
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: contract-artifacts
+          path: artifacts/
+
+      - name: Deploy contracts
+        env:
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          POLYGON_MUMBAI_RPC: ${{ secrets.POLYGON_MUMBAI_RPC }}
+          POLYGON_AMOY_RPC: ${{ secrets.POLYGON_AMOY_RPC }}
+          POLYGONSCAN_API_KEY: ${{ secrets.POLYGONSCAN_API_KEY }}
+        run: |
+          npx hardhat run scripts/deploy.ts --network ${{ github.event.inputs.network }}
+
+  deploy-mainnet:
+    name: Deploy to Mainnet
+    runs-on: ubuntu-latest
+    needs: [compile, test]
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.network == 'polygon'
+    environment: production
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: contract-artifacts
+          path: artifacts/
+
+      - name: Deploy contracts
+        env:
+          PRIVATE_KEY: ${{ secrets.MAINNET_PRIVATE_KEY }}
+          POLYGON_MAINNET_RPC: ${{ secrets.POLYGON_MAINNET_RPC }}
+          POLYGONSCAN_API_KEY: ${{ secrets.POLYGONSCAN_API_KEY }}
+        run: |
+          npx hardhat run scripts/deploy.ts --network polygon
+
+      - name: Create deployment summary
+        run: |
+          echo "## 🚀 Mainnet Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "Successfully deployed contracts to Polygon Mainnet" >> $GITHUB_STEP_SUMMARY
+
