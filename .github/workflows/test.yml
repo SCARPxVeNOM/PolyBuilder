@@ -64,20 +64,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Check for contracts
-        id: check-contracts
-        run: |
-          if [ -n "$(find contracts -name '*.sol' 2>/dev/null)" ]; then
-            echo "has_contracts=true" >> $GITHUB_OUTPUT
-          else
-            echo "has_contracts=false" >> $GITHUB_OUTPUT
-            echo "No Solidity contracts found - running basic tests only"
-          fi
-
-      - name: Compile contracts
-        if: steps.check-contracts.outputs.has_contracts == 'true'
-        run: npx hardhat compile
-
       - name: Run contract tests
         run: npx hardhat test
+        continue-on-error: false
 
