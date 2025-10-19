@@ -1,4 +1,4 @@
-# 🚀 PolyBuiler - Scaffold & Learning platform
+# 🚀 PolyBuilder - Scaffold & Learning platform
 
 <div align="center">
 
