@@ -3,11 +3,6 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "regions": ["iad1"],
-  "env": {
-    "DEPLOYER_PRIVATE_KEY": "@deployer_private_key",
-    "POLYGONSCAN_API_KEY": "@polygonscan_api_key",
-    "NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID": "@walletconnect_project_id"
-  }
+  "regions": ["iad1"]
 }
 
