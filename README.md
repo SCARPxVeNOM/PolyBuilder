@@ -1,4 +1,4 @@
-# 🚀 Polygon Scaffold Platform
+# 🚀 PolyBuiler - Scaffold & Learning platform
 
 <div align="center">
 
@@ -18,7 +18,7 @@
 
 ## 🌟 Overview
 
-Polygon Scaffold Platform is a **modern, all-in-one Web3 development studio** that combines the best of Replit, Scaffold-ETH, and Polygon Academy. Build production-ready smart contracts with zero setup, learn blockchain development through interactive lessons, and deploy to Polygon networks with a single click.
+PolyBuilder is a **modern, all-in-one Web3 development studio** that combines the best of Replit, Scaffold-ETH, and Polygon Academy. Build production-ready smart contracts with zero setup, learn blockchain development through interactive lessons, and deploy to Polygon networks with a single click.
 
 ### 🎯 Perfect For
 
@@ -431,7 +431,7 @@ If you find this project useful, please consider giving it a ⭐!
 
 Made with 💜 by the community
 
-[⬆ Back to top](#-polygon-scaffold-platform)
+[⬆ Back to top](#-PolyBuilder)
 
 </div>
 
