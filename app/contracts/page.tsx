@@ -9,7 +9,7 @@ import { NetworkSwitcher } from "@/components/web3/network-switcher";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
 import { Address } from "viem";
-import { Coins, Image, Users } from "lucide-react";
+import { Coins, ImageIcon, Users } from "lucide-react";
 
 // Example ERC-20 ABI (simplified)
 const ERC20_ABI = [
@@ -147,7 +147,7 @@ export default function ContractsPage() {
                           className="justify-start"
                           disabled
                         >
-                          <Image className="w-4 h-4 mr-2" />
+                          <ImageIcon className="w-4 h-4 mr-2" />
                           Example NFT
                         </Button>
                         <Button
