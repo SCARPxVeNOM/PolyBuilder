@@ -1,10 +1,7 @@
-import { HardhatUserConfig } from "hardhat/config";
-import "@nomicfoundation/hardhat-toolbox";
-import * as dotenv from "dotenv";
+require("@nomicfoundation/hardhat-toolbox");
+require("dotenv").config();
 
-dotenv.config();
-
-const config: HardhatUserConfig & { etherscan?: any } = {
+const config = {
   solidity: {
     version: "0.8.20",
     settings: {
@@ -48,5 +45,5 @@ const config: HardhatUserConfig & { etherscan?: any } = {
   },
 };
 
-export default config;
+module.exports = config;
 
