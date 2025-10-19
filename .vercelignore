@@ -1,0 +1,39 @@
+# Vercel build output
+.vercel
+
+# Dependencies
+node_modules
+
+# Testing
+coverage
+*.log
+
+# Hardhat files
+cache
+artifacts
+typechain-types
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Build output
+.next
+out
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
