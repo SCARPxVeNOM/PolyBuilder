@@ -32,11 +32,12 @@ PolyBuilder is a **modern, all-in-one Web3 development studio** that combines th
 ## ✨ Features
 
 ### 🤖 **AI-Powered Development** ⭐ NEW
-- **GPT-4 Code Assistant** - Get real-time code suggestions, explanations, and improvements
+- **Gemini 2.5 Flash AI** - Latest Google AI for real-time assistance (100% FREE!)
 - **Smart Contract Analyzer** - Automatic security audits and gas optimization
 - **Cross-Chain Migration** - Migrate contracts from any blockchain to Polygon with AI
 - **Context-Aware Help** - Ask questions about your code and get instant answers
 - **Bug Detection** - Identify vulnerabilities before deployment
+- **60 requests/minute** - Fast and generous rate limits
 
 ### 🏗️ **Interactive Web IDE**
 - **Monaco Editor** - VSCode-quality code editing in your browser
@@ -103,7 +104,7 @@ Practice Solidity with integrated challenges and instant feedback.
 
 - Node.js 18+ and npm
 - MetaMask or another Web3 wallet
-- OpenAI API key (for AI features) - Get from [platform.openai.com](https://platform.openai.com/api-keys)
+- Google Gemini API key (for AI features - **FREE!**) - Get from [makersuite.google.com](https://makersuite.google.com/app/apikey)
 - (Optional) Polygon testnet tokens from [faucet](https://faucet.polygon.technology/)
 
 ### Installation
@@ -130,8 +131,8 @@ Create a `.env.local` file:
 DEPLOYER_PRIVATE_KEY=your_private_key_here
 POLYGONSCAN_API_KEY=your_polygonscan_api_key_here
 
-# Required for AI features
-OPENAI_API_KEY=your_openai_api_key_here
+# Required for AI features (FREE!)
+GEMINI_API_KEY=your_gemini_api_key_here
 
 # Optional: Custom RPC URLs
 MUMBAI_RPC_URL=https://rpc-mumbai.maticvigil.com
