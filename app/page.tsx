@@ -5,6 +5,7 @@ import { StatsSection } from "@/components/landing/stats-section"
 import { TemplateCards } from "@/components/landing/template-cards"
 import { HowItWorks } from "@/components/landing/how-it-works"
 import { Features } from "@/components/landing/features"
+import { AIFeatures } from "@/components/landing/ai-features"
 import { CTASection } from "@/components/landing/cta-section"
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
     <div className="relative">
       <HeroSection />
       <StatsSection />
+      <AIFeatures />
       <div id="templates">
         <TemplateCards />
       </div>

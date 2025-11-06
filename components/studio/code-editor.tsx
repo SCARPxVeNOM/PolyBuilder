@@ -7,9 +7,10 @@ import { templates } from "@/lib/templates"
 interface CodeEditorProps {
   selectedFile: string | null
   template: string
+  onCodeChange?: (code: string) => void
 }
 
-export function CodeEditor({ selectedFile, template }: CodeEditorProps) {
+export function CodeEditor({ selectedFile, template, onCodeChange }: CodeEditorProps) {
   const [code, setCode] = useState("")
   const [language, setLanguage] = useState("solidity")
 
@@ -57,7 +58,11 @@ export function CodeEditor({ selectedFile, template }: CodeEditorProps) {
         height="100%"
         language={language}
         value={code}
-        onChange={(value) => setCode(value || "")}
+        onChange={(value) => {
+          const newCode = value || "";
+          setCode(newCode);
+          onCodeChange?.(newCode);
+        }}
         theme="vs-dark"
         options={{
           minimap: { enabled: true },

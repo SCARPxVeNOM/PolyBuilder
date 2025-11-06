@@ -9,6 +9,9 @@ const nextConfig = {
     config.ignoreWarnings = [
       { module: /node_modules\/@metamask\/sdk/ },
       { module: /node_modules\/pino/ },
+      { module: /node_modules\/@reown/ },
+      { module: /node_modules\/@base-org/ },
+      { module: /node_modules\/@wagmi/ },
     ];
 
     // Fallback for modules not available in browser
@@ -17,6 +20,7 @@ const nextConfig = {
         ...config.resolve.fallback,
         '@react-native-async-storage/async-storage': false,
         'pino-pretty': false,
+        'encoding': false,
       };
     }
 

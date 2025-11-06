@@ -8,11 +8,13 @@ import { PreviewPanel } from "./preview-panel"
 import { TemplateSelector } from "./template-selector"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Play, Save, Download, Settings, Terminal, Eye, FolderOpen } from "lucide-react"
+import { Play, Save, Download, Settings, Terminal, Eye, FolderOpen, Sparkles, Shield } from "lucide-react"
 import { ProgressManager } from "@/lib/learning/progress"
 import { triggerConfetti } from "@/lib/utils/confetti"
 import { QuickActions } from "./quick-actions"
 import { StatusBar } from "./status-bar"
+import { AIChat } from "@/components/ai/ai-chat"
+import { CodeAnalyzer } from "@/components/ai/code-analyzer"
 
 interface StudioLayoutProps {
   initialTemplate?: string
@@ -26,6 +28,7 @@ export function StudioLayout({ initialTemplate = "erc20" }: StudioLayoutProps) {
   const [showTemplateSelector, setShowTemplateSelector] = useState(false)
   const [isDeploying, setIsDeploying] = useState(false)
   const [deploymentStatus, setDeploymentStatus] = useState<any>(null)
+  const [currentCode, setCurrentCode] = useState("")
 
   const addLog = (message: string) => {
     setLogs((prev) => [...prev, `[${new Date().toLocaleTimeString()}] ${message}`])
@@ -203,6 +206,7 @@ export function StudioLayout({ initialTemplate = "erc20" }: StudioLayoutProps) {
             <CodeEditor 
               selectedFile={selectedFile} 
               template={template}
+              onCodeChange={setCurrentCode}
             />
           </div>
 
@@ -217,17 +221,31 @@ export function StudioLayout({ initialTemplate = "erc20" }: StudioLayoutProps) {
 
       {/* Right Sidebar - Console/Logs */}
       <div className="w-96 border-l border-white/10 flex flex-col bg-background/50 backdrop-blur-sm">
-        <Tabs defaultValue="console" className="flex-1 flex flex-col">
+        <Tabs defaultValue="ai" className="flex-1 flex flex-col">
           <TabsList className="w-full justify-start rounded-none border-b border-white/10 bg-transparent">
+            <TabsTrigger value="ai" className="data-[state=active]:bg-polygon-purple/20">
+              <Sparkles className="w-4 h-4 mr-2" />
+              AI Assistant
+            </TabsTrigger>
+            <TabsTrigger value="analyzer" className="data-[state=active]:bg-polygon-purple/20">
+              <Shield className="w-4 h-4 mr-2" />
+              Analyzer
+            </TabsTrigger>
             <TabsTrigger value="console" className="data-[state=active]:bg-polygon-purple/20">
               <Terminal className="w-4 h-4 mr-2" />
               Console
             </TabsTrigger>
             <TabsTrigger value="contract" className="data-[state=active]:bg-polygon-purple/20">
               <Settings className="w-4 h-4 mr-2" />
-              Contract Info
+              Info
             </TabsTrigger>
           </TabsList>
+          <TabsContent value="ai" className="flex-1 m-0">
+            <AIChat currentCode={currentCode} />
+          </TabsContent>
+          <TabsContent value="analyzer" className="flex-1 m-0">
+            <CodeAnalyzer code={currentCode} />
+          </TabsContent>
           <TabsContent value="console" className="flex-1 m-0">
             <ConsolePanel logs={logs} />
           </TabsContent>
