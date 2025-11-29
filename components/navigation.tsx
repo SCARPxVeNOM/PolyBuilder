@@ -13,11 +13,12 @@ export function Navigation() {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Studio", href: "/studio" },
+    { name: "Marketplace", href: "/marketplace" },
+    { name: "Analytics", href: "/analytics" },
     { name: "Migrate", href: "/migrate" },
+    { name: "Organizations", href: "/organizations" },
+    { name: "Grants", href: "/grants" },
     { name: "Learn", href: "/learn" },
-    { name: "Challenges", href: "/challenges" },
-    { name: "Contracts", href: "/contracts" },
-    { name: "Dashboard", href: "/dashboard" },
   ]
 
   return (
@@ -35,7 +36,7 @@ export function Navigation() {
               <Code2 className="w-5 h-5 text-white" />
             </div>
             <span className="font-bold text-xl">
-              Polygon<span className="text-gradient">Scaffold</span>
+              Poly<span className="text-gradient">Builder</span>
             </span>
           </Link>
 

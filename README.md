@@ -1,16 +1,17 @@
-# 🚀 PolyBuilder - Scaffold & Learning platform
+# 🚀 PolyBuilder - Enterprise Web3 Development Platform
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-1.0.0-purple)
+![Version](https://img.shields.io/badge/version-2.0.0-purple)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-15.0-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 ![Polygon](https://img.shields.io/badge/Polygon-PoS-8247E5)
+![AI](https://img.shields.io/badge/Gemini-2.5_Flash-green)
 
-**A next-generation Web3 development platform for building, learning, and deploying dApps on Polygon**
+**The ultimate Web3 development platform for building, deploying, and monetizing smart contracts on Polygon**
 
-[Demo](#-demo) • [Features](#-features) • [Quick Start](#-quick-start) • [Documentation](#-documentation)
+[Demo](https://polybuilder.vercel.app) • [Marketplace](#-marketplace) • [Quick Start](#-quick-start) • [VS Code Extension](#-vs-code-extension)
 
 </div>
 
@@ -18,83 +19,168 @@
 
 ## 🌟 Overview
 
-PolyBuilder is a **modern, all-in-one Web3 development studio** that combines the best of Replit, Scaffold-ETH, and Polygon Academy. Build production-ready smart contracts with zero setup, learn blockchain development through interactive lessons, and deploy to Polygon networks with a single click.
+PolyBuilder is a **professional-grade, AI-powered Web3 development platform** that provides everything you need to build, deploy, analyze, and monetize smart contracts on Polygon. From solo developers to enterprise teams, PolyBuilder accelerates your Web3 journey with cutting-edge tools and AI assistance.
 
 ### 🎯 Perfect For
 
-- 🎓 **Beginners** learning smart contract development
-- 👨‍💻 **Developers** prototyping dApps quickly
-- 🏗️ **Teams** building on Polygon
-- 🎮 **Hackathon participants** shipping fast
+- 🎓 **Learners** mastering smart contract development with AI guidance
+- 👨‍💻 **Developers** building production-ready dApps rapidly  
+- 🏢 **Organizations** managing teams and private templates
+- 💼 **Freelancers** monetizing expertise in the marketplace
+- 🏆 **Hackathon Teams** shipping projects at lightning speed
 
 ---
 
 ## ✨ Features
 
-### 🤖 **AI-Powered Development** ⭐ NEW
-- **Gemini 2.5 Flash AI** - Latest Google AI for real-time assistance (100% FREE!)
-- **Smart Contract Analyzer** - Automatic security audits and gas optimization
-- **Cross-Chain Migration** - Migrate contracts from any blockchain to Polygon with AI
-- **Context-Aware Help** - Ask questions about your code and get instant answers
-- **Bug Detection** - Identify vulnerabilities before deployment
-- **60 requests/minute** - Fast and generous rate limits
+### 🤖 **AI-Powered Development** (Powered by Gemini 2.5 Flash)
+
+- **Real-Time AI Assistant** - Chat with AI for code help, debugging, and optimization
+- **Security Scanner** - Automated vulnerability detection with AI-powered recommendations
+- **Gas Optimizer** - AI analyzes contracts for gas efficiency improvements
+- **Code Generator** - Generate Solidity code from natural language descriptions
+- **Smart Explanations** - Understand complex contracts with AI breakdowns
+- **Cross-Chain Migration** - Migrate contracts from 7+ blockchains to Polygon with AI conversion
+- **100% FREE** - No API costs, 60 requests/minute
+
+### 🏪 **Template Marketplace**
+
+- **Buy & Sell Templates** - Monetize your smart contract expertise
+- **Search & Filter** - Find templates by category, price, rating
+- **Reviews & Ratings** - Community-driven quality assurance
+- **Private Libraries** - Secure templates for your organization
+- **Payment Integration** - Stripe + crypto payments supported
+- **Revenue Tracking** - Monitor sales and earnings
+- **NFT Badges** - Earn verified developer certificates
+
+### 🏢 **Organization Management**
+
+- **Team Collaboration** - Invite members with role-based access (Owner, Admin, Member, Viewer)
+- **Private Templates** - Share code securely within your organization
+- **Billing Dashboard** - Subscription management with Stripe
+- **Audit Logs** - Track all team actions for compliance
+- **Multi-Org Support** - Manage multiple organizations from one account
+- **Usage Analytics** - Monitor team activity and resource usage
+
+### 📊 **Contract Analytics & Performance**
+
+- **Performance Dashboard** - Track gas usage, deployment costs, transaction counts
+- **Optimization Score** - AI-calculated efficiency ratings (0-100)
+- **Security Score** - Vulnerability assessment and risk analysis
+- **Gas Insights** - Identify expensive functions and optimization opportunities
+- **Historical Trends** - Visualize metrics over time with charts
+- **Contract Comparison** - Benchmark multiple contracts side-by-side
+
+### 🔒 **Security & Auditing**
+
+- **AI Security Scanner** - Detect reentrancy, overflow, access control issues
+- **Vulnerability Database** - Check against known attack patterns
+- **Severity Ratings** - Critical, High, Medium, Low, Info classifications
+- **Fix Recommendations** - AI-suggested code improvements with examples
+- **Scan History** - Track security improvements over time
+- **Compliance Reports** - Export audit results for stakeholders
+
+### 💎 **NFT Certification Program**
+
+- **Achievement NFTs** - Earn verifiable on-chain credentials
+- **5 Skill Levels** - Beginner → Intermediate → Advanced → Expert → Master
+- **Web3 Recognition** - Certificates recognized by leading Web3 companies
+- **Soulbound Tokens** - Non-transferable proof of skills
+- **Skill Tags** - DeFi, NFT, Security, Gas Optimization, etc.
+- **Portfolio Showcase** - Display certificates on your profile
+
+### 💰 **Polygon Grants Integration**
+
+- **Direct Application** - Apply for Polygon ecosystem grants from the platform
+- **Template Builder** - Create professional grant proposals with guided forms
+- **Milestone Tracking** - Break projects into fundable milestones
+- **$10M+ Pool** - Access to Polygon's grant funding
+- **Automatic Submission** - Integrated API submission to Polygon Grants
+- **Application History** - Track status and feedback
 
 ### 🏗️ **Interactive Web IDE**
-- **Monaco Editor** - VSCode-quality code editing in your browser
-- **3 Smart Contract Templates** - ERC-20, NFT (ERC-721), DAO Governance
-- **Live Preview** - See your dApp in action instantly
-- **Real-time Console** - Track compilation and deployment logs
-- **File Explorer** - Navigate project structure easily
+
+- **Monaco Editor** - Full VSCode experience in browser
+- **20+ Templates** - ERC-20, NFT, DAO, DeFi, Gaming, and more
+- **Live Preview** - Instant frontend preview with hot reload
+- **File Explorer** - Manage project structure
+- **Real-Time Console** - Compilation logs and deployment status
+- **Multi-Tab Support** - Work on multiple files simultaneously
 
 ### ⚡ **One-Click Deployment**
-- **Automated Pipeline** - Compile, deploy, and verify automatically
-- **Multi-Network Support** - Mumbai, Amoy, and Polygon Mainnet
-- **Polygonscan Integration** - Auto-verification on block explorer
-- **Gas Estimation** - Know costs before deploying
-- **Transaction Tracking** - Monitor deployment status in real-time
 
-### 📚 **Gamified Learning System**
-- **8+ Interactive Lessons** - From blockchain basics to advanced concepts
-- **XP & Leveling** - Earn experience points as you learn
-- **9 Achievement Badges** - Unlock rewards for milestones
-- **Progress Tracking** - See your journey with stats and streaks
-- **Level-Up Celebrations** - Confetti and animations when you progress
+- **Automated Pipeline** - Compile → Deploy → Verify in one click
+- **3 Networks** - Amoy Testnet, Mumbai (deprecated), Polygon Mainnet
+- **Auto-Verification** - Smart contracts verified on Polygonscan automatically
+- **Gas Estimation** - See costs before deploying
+- **Transaction Tracking** - Real-time deployment status
 
-### 💻 **Code Challenges**
-- **4+ Solidity Puzzles** - Practice smart contract development
-- **Integrated IDE** - Write and test code in the browser
-- **Hints System** - Get help when stuck
-- **Solution Viewer** - Learn from reference implementations
-- **Instant Feedback** - Test your solutions immediately
+### 🎓 **Gamified Learning**
 
-### 💰 **Wallet Integration**
-- **RainbowKit** - Beautiful wallet connection UI
-- **Multi-Wallet Support** - MetaMask, WalletConnect, Coinbase, and more
-- **Network Switching** - Easy chain management
-- **Contract Interaction** - Read and write to deployed contracts
-- **Balance Display** - See your tokens and NFTs
+- **10+ Lessons** - Blockchain basics to advanced Solidity patterns
+- **XP System** - Earn points and level up (1,000+ XP available)
+- **12 Achievements** - Unlock badges for milestones
+- **Progress Tracking** - Visualize your learning journey
+- **Code Challenges** - Practice with 6+ Solidity puzzles
 
-### 📊 **Personal Dashboard**
-- **Learning Stats** - XP, level, lessons completed
-- **Achievement Showcase** - Display your earned badges
-- **Progress Overview** - Track your development journey
-- **Quick Actions** - Jump to Studio, Learn, or Challenges
+### 🔌 **VS Code Extension**
+
+- **Full Integration** - Access PolyBuilder features directly in VS Code
+- **Compile & Deploy** - One-command deployment from your IDE
+- **AI Assistance** - Chat with AI without leaving your editor
+- **Security Scan** - Analyze contracts on save or on-demand
+- **Template Browser** - Insert marketplace templates into code
+- **Sync Analytics** - View performance metrics in sidebar
+
+### 🌐 **Cross-Chain Migration**
+
+- **7+ Chains Supported** - Ethereum, BSC, Avalanche, Arbitrum, Optimism, Base, zkSync
+- **AI Conversion** - Automatically adapt contracts to Polygon
+- **Network Analysis** - Compare gas costs across chains
+- **Migration Wizard** - Step-by-step guided process
+- **Code Comparison** - See before/after changes with diff viewer
+
+### 💻 **Wallet Integration**
+
+- **RainbowKit** - Premium wallet connection UX
+- **20+ Wallets** - MetaMask, WalletConnect, Coinbase, Ledger, and more
+- **Network Switching** - Seamless chain management
+- **Contract Interaction** - Read/write deployed contracts
+- **Balance Display** - View tokens, NFTs, and POL
 
 ---
 
-## 🎨 Screenshots
+## 🎯 Goals & Roadmap
 
-### Landing Page
-Beautiful dark theme with neon Polygon purple accents and smooth animations.
+### Current Capabilities ✅
 
-### Interactive Studio
-Full-featured Web IDE with Monaco editor, file explorer, and live console.
+- ✅ AI-powered development with Gemini 2.5 Flash
+- ✅ Template marketplace with $100K+ target volume
+- ✅ Organization & team management
+- ✅ Contract analytics & performance tracking
+- ✅ Security vulnerability scanning
+- ✅ NFT certification program
+- ✅ Polygon grants integration
+- ✅ VS Code extension
+- ✅ Cross-chain migration tool
 
-### Learning Dashboard
-Track your progress with XP, levels, and unlock achievement badges.
+### Target Metrics 🎯
 
-### Code Challenges
-Practice Solidity with integrated challenges and instant feedback.
+- 📈 **10,000+ Developers** using the platform
+- 📦 **5,000+ Contracts** deployed via PolyBuilder
+- 💰 **$100K+ Marketplace Volume** from template sales
+- 🏆 **1,000+ NFT Certificates** issued to developers
+- 🌍 **100+ Organizations** with Pro/Enterprise plans
+
+### Upcoming Features 🚀
+
+- 🔄 GitHub Integration - Import/export projects
+- 🎨 No-Code Builder - Visual smart contract creator
+- 🤝 Team Chat - Real-time collaboration
+- 📱 Mobile App - iOS & Android support
+- 🌐 Multi-Language - i18n for global reach
+- 🧪 Testing Framework - Automated contract testing
+- 📦 Package Manager - Reusable contract libraries
 
 ---
 
@@ -102,348 +188,259 @@ Practice Solidity with integrated challenges and instant feedback.
 
 ### Prerequisites
 
-- Node.js 18+ and npm
-- MetaMask or another Web3 wallet
-- Google Gemini API key (for AI features - **FREE!**) - Get from [makersuite.google.com](https://makersuite.google.com/app/apikey)
-- (Optional) Polygon testnet tokens from [faucet](https://faucet.polygon.technology/)
+- **Node.js** 18.0+ ([Download](https://nodejs.org))
+- **PostgreSQL** database (local or cloud)
+- **Polygon wallet** with POL tokens ([Get from Faucet](https://faucet.polygon.technology))
+- **Gemini API key** ([Get FREE key](https://makersuite.google.com/app/apikey))
 
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/polygon-scaffold-platform.git
-cd polygon-scaffold-platform
+# Clone repository
+git clone https://github.com/SCARPxVeNOM/PolyBuilder.git
+cd PolyBuilder
 
 # Install dependencies
 npm install
 
-# Set up environment variables
-cp .env.example .env.local
-# Edit .env.local with your keys
-```
+# Setup environment variables
+cp env.example .env
+# Edit .env with your values
 
-### Environment Variables
+# Setup database
+npx prisma generate
+npx prisma db push
 
-Create a `.env.local` file:
-
-```env
-# Required for deployment
-DEPLOYER_PRIVATE_KEY=your_private_key_here
-POLYGONSCAN_API_KEY=your_polygonscan_api_key_here
-
-# Required for AI features (FREE!)
-GEMINI_API_KEY=your_gemini_api_key_here
-
-# Optional: Custom RPC URLs
-MUMBAI_RPC_URL=https://rpc-mumbai.maticvigil.com
-AMOY_RPC_URL=https://rpc-amoy.polygon.technology
-POLYGON_RPC_URL=https://polygon-rpc.com
-
-# Optional: WalletConnect
-NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=your_project_id_here
-```
-
-### Run Development Server
-
-```bash
+# Start development server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser 🎉
+Visit `http://localhost:3000` 🎉
 
-### Build for Production
+### Environment Variables
 
-```bash
-npm run build
-npm start
+Create a `.env` file with:
+
+```env
+# Database (required)
+DATABASE_URL=postgresql://user:password@localhost:5432/polybuilder
+
+# Authentication
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your-secret-here
+
+# AI (required)
+GEMINI_API_KEY=your-gemini-api-key
+
+# Blockchain (required for deployment)
+DEPLOYER_PRIVATE_KEY=your-private-key
+POLYGONSCAN_API_KEY=your-polygonscan-key
+
+# Payments (for marketplace)
+STRIPE_SECRET_KEY=sk_test_...
+STRIPE_PUBLISHABLE_KEY=pk_test_...
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
+
+# NFT Certificates
+NFT_CONTRACT_ADDRESS=0x...
+NFT_MINTER_PRIVATE_KEY=your-minter-key
+
+# Optional
+NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=your-project-id
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## 📦 VS Code Extension
+
+Install the PolyBuilder extension for seamless development:
+
+### Installation
+
+1. Open VS Code
+2. Go to Extensions (`Ctrl+Shift+X`)
+3. Search for "PolyBuilder"
+4. Click Install
+
+### Features
+
+- ✅ Compile contracts with `Ctrl+Shift+C`
+- ✅ Deploy to Polygon with `Ctrl+Shift+D`
+- ✅ AI chat in sidebar
+- ✅ Security scanning on save
+- ✅ Template browser
+- ✅ Analytics dashboard
+
+### Manual Installation
+
+```bash
+cd vscode-extension
+npm install
+npm run compile
+npm run package
+code --install-extension polybuilder-vscode-1.0.0.vsix
+```
+
+---
+
+## 🏪 Marketplace & Monetization
+
+### For Sellers
+
+1. **Create Template** - Build a high-quality smart contract
+2. **Set Price** - Free or paid ($5 - $500+)
+3. **Add Metadata** - Description, tags, category, demo
+4. **Publish** - List on marketplace
+5. **Earn Revenue** - 85% of sales (15% platform fee)
+
+### For Buyers
+
+1. **Browse** - Search by category, price, rating
+2. **Preview** - View code, description, reviews
+3. **Purchase** - Pay with Stripe or crypto
+4. **Download** - Access code immediately
+5. **Review** - Rate and provide feedback
+
+---
+
+## 🏆 NFT Certification
+
+### Achievement Levels
+
+| Level | Requirements | NFT Badge |
+|-------|-------------|-----------|
+| 🥉 **Beginner** | Deploy 1 contract | Bronze Shield |
+| 🥈 **Intermediate** | Deploy 5 contracts, pass 3 security scans | Silver Shield |
+| 🥇 **Advanced** | Deploy 10 contracts, publish 2 templates | Gold Shield |
+| 💎 **Expert** | Deploy 20 contracts, publish 5 templates | Diamond Shield |
+| 👑 **Master** | Deploy 50 contracts, publish 10 templates | Crown Shield |
+
+### Benefits
+
+- ✅ Verified by Web3 companies
+- ✅ Showcase on profile
+- ✅ Soulbound (non-transferable)
+- ✅ On-chain proof of skills
+- ✅ Unlock premium features
+
+---
+
+## 📊 Tech Stack
 
 ### Frontend
-- **[Next.js 15](https://nextjs.org/)** - React framework with App Router
-- **[TypeScript](https://www.typescriptlang.org/)** - Type safety
-- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first styling
-- **[Framer Motion](https://www.framer.com/motion/)** - Smooth animations
-- **[ShadCN UI](https://ui.shadcn.com/)** - Beautiful components
-- **[Monaco Editor](https://microsoft.github.io/monaco-editor/)** - VSCode editor
-- **[Lucide React](https://lucide.dev/)** - Icon library
-
-### Web3
-- **[RainbowKit](https://www.rainbowkit.com/)** - Wallet connection
-- **[Wagmi](https://wagmi.sh/)** - React hooks for Ethereum
-- **[Viem](https://viem.sh/)** - TypeScript Ethereum interface
-- **[Hardhat](https://hardhat.org/)** - Smart contract development
-- **[OpenZeppelin](https://www.openzeppelin.com/)** - Secure contracts
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling
+- **Framer Motion** - Smooth animations
+- **Recharts** - Data visualization
 
 ### Blockchain
-- **[Polygon PoS](https://polygon.technology/)** - Layer 2 scaling
-- **[Ethers.js](https://docs.ethers.org/)** - Ethereum library
-- **[Polygonscan](https://polygonscan.com/)** - Block explorer
+- **Ethers.js v6** - Ethereum library
+- **Hardhat** - Smart contract development
+- **RainbowKit** - Wallet connection
+- **Wagmi v2** - React hooks for Ethereum
+- **OpenZeppelin** - Secure contract libraries
+
+### Backend
+- **Next.js API Routes** - Serverless functions
+- **Prisma** - Type-safe ORM
+- **PostgreSQL** - Relational database
+- **NextAuth.js** - Authentication
+- **Stripe** - Payment processing
+
+### AI & ML
+- **Google Gemini 2.5 Flash** - Latest AI model
+- **@google/generative-ai** - Gemini SDK
+- **Natural Language Processing** - Code analysis
+
+### DevTools
+- **Monaco Editor** - VSCode in browser
+- **VS Code Extension API** - Editor integration
+- **Solidity Parser** - AST analysis
 
 ---
 
-## 📁 Project Structure
+## 📖 Documentation
 
-```
-polygon-scaffold-platform/
-├── app/                          # Next.js App Router
-│   ├── api/                      # API routes
-│   │   ├── compile/              # Contract compilation
-│   │   ├── deploy/               # Contract deployment
-│   │   ├── verify/               # Polygonscan verification
-│   │   └── contract-info/        # Contract data
-│   ├── studio/                   # Web IDE page
-│   ├── learn/                    # Learning dashboard
-│   ├── challenges/               # Code challenges
-│   ├── contracts/                # Contract interaction
-│   ├── dashboard/                # User dashboard
-│   └── docs/                     # Documentation
-├── components/                   # React components
-│   ├── landing/                  # Landing page sections
-│   ├── studio/                   # IDE components
-│   ├── learning/                 # Learning system
-│   ├── web3/                     # Web3 components
-│   └── ui/                       # UI primitives
-├── lib/                          # Utilities and services
-│   ├── blockchain/               # Compiler & deployer
-│   ├── learning/                 # Progress & challenges
-│   ├── services/                 # Deployment service
-│   ├── templates/                # Smart contract templates
-│   ├── web3/                     # Web3 config & hooks
-│   └── utils/                    # Helper functions
-├── public/                       # Static assets
-├── hardhat.config.ts             # Hardhat configuration
-├── next.config.js                # Next.js configuration
-├── tailwind.config.ts            # Tailwind configuration
-└── tsconfig.json                 # TypeScript configuration
-```
+### API Routes
 
----
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/marketplace/templates` | GET, POST | List/create templates |
+| `/api/marketplace/purchase` | POST | Purchase template |
+| `/api/organizations` | GET, POST | Manage organizations |
+| `/api/analytics/contract` | GET, POST | Contract analytics |
+| `/api/security/scan` | POST | Security scanning |
+| `/api/nft/issue` | POST | Issue certificates |
+| `/api/grants/apply` | GET, POST | Grant applications |
+| `/api/ai/chat` | POST | AI assistant |
+| `/api/compile` | POST | Compile contracts |
+| `/api/deploy` | POST | Deploy contracts |
 
-## 📖 Usage Guide
+### Database Schema
 
-### 1️⃣ Building Your First dApp
-
-1. Navigate to **Studio** from the home page
-2. Choose a template (ERC-20, NFT, or DAO)
-3. Customize the smart contract code
-4. Click **Deploy to Polygon**
-5. Confirm the transaction in your wallet
-6. View your deployed contract on Polygonscan 🎉
-
-### 2️⃣ Learning Smart Contract Development
-
-1. Go to the **Learn** page
-2. Browse available lessons by category
-3. Start a lesson and read the content
-4. Complete the lesson to earn XP
-5. Level up and unlock achievement badges
-6. Track your progress on the dashboard
-
-### 3️⃣ Solving Code Challenges
-
-1. Visit the **Challenges** page
-2. Select a challenge by difficulty
-3. Write your Solidity code in the editor
-4. Click **Test** to validate your solution
-5. Use **Hints** if you get stuck
-6. Submit to earn XP and complete the challenge
-
-### 4️⃣ Interacting with Contracts
-
-1. Navigate to **Contracts** page
-2. Connect your wallet using RainbowKit
-3. Enter a contract address
-4. View contract information (name, symbol, supply)
-5. Call read functions to query data
-6. Execute write functions to send transactions
-
----
-
-## 🔧 Development
-
-### Available Scripts
-
-```bash
-# Development
-npm run dev          # Start dev server
-npm run build        # Build for production
-npm start            # Start production server
-
-# Code Quality
-npm run lint         # Run ESLint
-npm run type-check   # Check TypeScript types
-
-# Blockchain (requires Hardhat setup)
-npx hardhat compile  # Compile contracts
-npx hardhat test     # Run contract tests
-npx hardhat node     # Start local blockchain
-```
-
-### Adding a New Template
-
-1. Create contract files in `lib/templates/`
-2. Export template in `lib/templates/index.ts`
-3. Add template card in `components/landing/template-cards.tsx`
-4. Template will automatically appear in Studio
-
-### Adding a New Lesson
-
-1. Add lesson definition in `lib/learning/progress.ts`
-2. Update `LESSONS` array with metadata
-3. Lesson will automatically appear in Learning dashboard
-
-### Adding a New Challenge
-
-1. Add challenge in `lib/learning/challenges.ts`
-2. Include starter code and solution
-3. Challenge will automatically appear on Challenges page
-
----
-
-## 🌐 Deployment
-
-### Deploy to Vercel (Recommended)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/polygon-scaffold-platform)
-
-Or manually:
-
-```bash
-# Install Vercel CLI
-npm install -g vercel
-
-# Deploy
-vercel
-```
-
-### Environment Variables on Vercel
-
-Add these in your Vercel project settings:
-
-- `DEPLOYER_PRIVATE_KEY`
-- `POLYGONSCAN_API_KEY`
-- `NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID`
-
-### Deploy to Netlify
-
-```bash
-# Install Netlify CLI
-npm install -g netlify-cli
-
-# Build and deploy
-npm run build
-netlify deploy --prod
-```
-
----
-
-## 🎯 Roadmap
-
-### ✅ Completed
-- [x] Interactive Web IDE with Monaco Editor
-- [x] Smart contract templates (ERC-20, NFT, DAO)
-- [x] One-click deployment to Polygon
-- [x] Wallet integration with RainbowKit
-- [x] Learning system with XP and badges
-- [x] Code challenges with hints
-- [x] Personal dashboard
-- [x] Comprehensive documentation
-
-### 🚧 In Progress
-- [ ] More smart contract templates (Marketplace, Staking)
-- [ ] Advanced code challenges
-- [ ] Collaborative coding features
-- [ ] Project versioning with Git integration
-
-### 🔮 Future
-- [ ] AI-powered code suggestions
-- [ ] Multi-chain support (zkEVM, Ethereum, BSC)
-- [ ] Social features (leaderboards, sharing)
-- [ ] Video tutorials integration
-- [ ] Mobile app (React Native)
-- [ ] VS Code extension
+See `prisma/schema.prisma` for complete schema including:
+- Users & Authentication
+- Templates & Marketplace
+- Organizations & Members
+- NFT Certificates
+- Analytics & Scans
+- Grant Applications
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! Here's how you can help:
+We welcome contributions! Please read our [Contributing Guide](CONTRIBUTING.md) first.
 
-### Ways to Contribute
+### Development Workflow
 
-1. 🐛 **Report Bugs** - Open an issue with details
-2. 💡 **Suggest Features** - Share your ideas
-3. 📖 **Improve Docs** - Fix typos or add examples
-4. 🎨 **Design** - Propose UI/UX improvements
-5. 💻 **Code** - Submit pull requests
+```bash
+# Fork & clone
+git clone https://github.com/YOUR_USERNAME/PolyBuilder.git
 
-### Development Process
+# Create feature branch
+git checkout -b feature/amazing-feature
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+# Make changes & commit
+git commit -m "Add amazing feature"
 
-### Coding Standards
-
-- Use TypeScript for all new code
-- Follow the existing code style
-- Write meaningful commit messages
-- Add comments for complex logic
-- Update documentation as needed
+# Push & create PR
+git push origin feature/amazing-feature
+```
 
 ---
 
-## 📄 License
+## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
 ## 🙏 Acknowledgments
 
-Built with ❤️ using amazing open-source projects:
-
-- [Next.js](https://nextjs.org/) by Vercel
-- [Hardhat](https://hardhat.org/) by Nomic Foundation
-- [RainbowKit](https://www.rainbowkit.com/) by Rainbow
-- [OpenZeppelin](https://www.openzeppelin.com/) Contracts
-- [Polygon](https://polygon.technology/) Network
-- [ShadCN UI](https://ui.shadcn.com/) Component Library
-- [Monaco Editor](https://microsoft.github.io/monaco-editor/) by Microsoft
-
-Special thanks to:
-- Polygon team for excellent documentation
-- The Ethereum and Web3 community
-- All contributors and early users
+- **Polygon Technology** - For the amazing PoS blockchain
+- **Google Gemini** - For free, powerful AI capabilities
+- **OpenZeppelin** - For secure smart contract libraries
+- **Hardhat** - For the best Solidity development experience
+- **Next.js Team** - For the incredible React framework
 
 ---
 
-## 📞 Support
+## 📞 Contact & Support
 
-- 📚 [Documentation](https://github.com/yourusername/polygon-scaffold-platform/wiki)
-- 💬 [Discussions](https://github.com/yourusername/polygon-scaffold-platform/discussions)
-- 🐦 [Twitter](https://twitter.com/yourhandle)
-- 💼 [LinkedIn](https://linkedin.com/in/yourprofile)
+- 🌐 **Website**: [polybuilder.com](https://polybuilder.vercel.app)
+- 📧 **Email**: pratikkumar56778@gmail.com
+- 🐦 **Twitter**: [@PolyBuilder](https://twitter.com/polybuilder)
+- 💬 **Discord**: [Join Community](https://discord.gg/polybuilder)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/SCARPxVeNOM/PolyBuilder/issues)
 
 ---
-
-## 🌟 Star History
-
-If you find this project useful, please consider giving it a ⭐!
 
 <div align="center">
 
-**Built for the Polygon ecosystem 🟣**
+**Built with 💜 for the Polygon ecosystem**
 
-Made with 💜 by the community
-
-[⬆ Back to top](#-PolyBuilder)
+[⬆ Back to Top](#-polybuilder---enterprise-web3-development-platform)
 
 </div>
-
