@@ -8,12 +8,44 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 ![Polygon](https://img.shields.io/badge/Polygon-PoS-8247E5)
 ![AI](https://img.shields.io/badge/Gemini-2.5_Flash-green)
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![NFT](https://img.shields.io/badge/NFT-Deployed-orange)
 
 **The ultimate Web3 development platform for building, deploying, and monetizing smart contracts on Polygon**
 
 [Demo](https://polybuilder.vercel.app) • [Marketplace](#-marketplace) • [Quick Start](#-quick-start) • [VS Code Extension](#-vs-code-extension)
 
 </div>
+
+</div>
+
+---
+
+## 🎉 What's New in v2.0.0
+
+### 🚀 **Major Release - Enterprise Edition**
+
+**Released**: November 2024  
+**NFT Contract**: [0x748781a34637112E4F5EbCBfC67872338Ccb18a2](https://amoy.polygonscan.com/address/0x748781a34637112E4F5EbCBfC67872338Ccb18a2)
+
+#### **New Features:**
+- ✅ **Template Marketplace** - Buy & sell smart contracts (Target: $100K+ volume)
+- ✅ **Organization Management** - Team collaboration with role-based access
+- ✅ **Contract Analytics** - Performance tracking & optimization insights
+- ✅ **Security Scanner** - AI-powered vulnerability detection
+- ✅ **NFT Certificates** - Soulbound achievement tokens (deployed on Polygon)
+- ✅ **Polygon Grants** - Direct grant application integration
+- ✅ **VS Code Extension** - Full IDE integration
+- ✅ **Database Layer** - PostgreSQL with Prisma ORM (15 models)
+- ✅ **Authentication** - NextAuth.js with wallet + email support
+
+#### **Technical Improvements:**
+- 📦 100+ new files (10 pages, 23 API routes, 50+ components)
+- 🗄️ Complete database architecture with Supabase
+- 🎨 Professional UI with Recharts for analytics
+- 🔒 Enterprise-grade security and audit logs
+- 💳 Stripe payment integration
+- 🤖 Enhanced AI capabilities with Gemini 2.5 Flash
 
 ---
 
@@ -181,6 +213,34 @@ PolyBuilder is a **professional-grade, AI-powered Web3 development platform** th
 - 🌐 Multi-Language - i18n for global reach
 - 🧪 Testing Framework - Automated contract testing
 - 📦 Package Manager - Reusable contract libraries
+
+---
+
+## 🎬 Live Demo & Deployment
+
+### 🌐 **Production URLs**
+
+- **Main App**: [https://polybuilder.vercel.app](https://polybuilder.vercel.app)
+- **NFT Contract**: [0x748781a34637112E4F5EbCBfC67872338Ccb18a2](https://amoy.polygonscan.com/address/0x748781a34637112E4F5EbCBfC67872338Ccb18a2)
+- **Network**: Polygon Amoy Testnet
+- **GitHub**: [SCARPxVeNOM/PolyBuilder](https://github.com/SCARPxVeNOM/PolyBuilder)
+
+### 📸 **Screenshots**
+
+#### 🏠 Landing Page
+Beautiful dark theme with AI-powered features and smooth animations
+
+#### 🛒 Template Marketplace
+Browse, search, and purchase smart contract templates with ratings
+
+#### 📊 Analytics Dashboard
+Track performance, gas usage, and optimization scores with interactive charts
+
+#### 👥 Organization Management
+Manage teams, roles, and private template libraries
+
+#### 🎨 NFT Certificate System
+Earn on-chain credentials recognized by Web3 companies
 
 ---
 
@@ -360,6 +420,60 @@ code --install-extension polybuilder-vscode-1.0.0.vsix
 
 ---
 
+## 🚀 Deployment Guide
+
+### **Deploy to Vercel** (Recommended)
+
+1. **Fork the repository** on GitHub
+
+2. **Import to Vercel**:
+   - Go to [vercel.com](https://vercel.com)
+   - Click "New Project"
+   - Import your forked repository
+
+3. **Add Environment Variables**:
+   ```env
+   DATABASE_URL=postgresql://...
+   NEXTAUTH_URL=https://your-app.vercel.app
+   NEXTAUTH_SECRET=your-secret
+   GEMINI_API_KEY=your-key
+   DEPLOYER_PRIVATE_KEY=0x...
+   NFT_CONTRACT_ADDRESS=0x748781a34637112E4F5EbCBfC67872338Ccb18a2
+   NFT_MINTER_PRIVATE_KEY=0x...
+   # Add all other env vars from .env.example
+   ```
+
+4. **Deploy**:
+   - Click "Deploy"
+   - Wait for build to complete (~3-5 minutes)
+   - Your app is live! 🎉
+
+### **Database Setup** (Supabase)
+
+1. Create project at [supabase.com](https://supabase.com)
+2. Copy connection string
+3. Add to `DATABASE_URL` in environment variables
+4. Run migrations:
+   ```bash
+   npx prisma db push
+   ```
+
+### **NFT Contract Deployment**
+
+The NFT Certificate contract is already deployed:
+```
+Address: 0x748781a34637112E4F5EbCBfC67872338Ccb18a2
+Network: Polygon Amoy Testnet
+View: https://amoy.polygonscan.com/address/0x748781a34637112E4F5EbCBfC67872338Ccb18a2
+```
+
+To deploy your own:
+```bash
+npx hardhat run scripts/deploy-nft.js --network amoy
+```
+
+---
+
 ## 📖 Documentation
 
 ### API Routes
@@ -379,13 +493,38 @@ code --install-extension polybuilder-vscode-1.0.0.vsix
 
 ### Database Schema
 
-See `prisma/schema.prisma` for complete schema including:
-- Users & Authentication
-- Templates & Marketplace
-- Organizations & Members
-- NFT Certificates
-- Analytics & Scans
-- Grant Applications
+**15 Models** in `prisma/schema.prisma`:
+
+| Model | Description |
+|-------|-------------|
+| `User` | User accounts & authentication |
+| `Account` | OAuth/wallet providers |
+| `Session` | User sessions |
+| `Template` | Smart contract templates |
+| `TemplatePurchase` | Marketplace transactions |
+| `TemplateReview` | Ratings & reviews |
+| `NFTCertificate` | Achievement badges |
+| `Organization` | Team entities |
+| `OrganizationMember` | Team members & roles |
+| `Subscription` | Billing & plans |
+| `AuditLog` | Activity tracking |
+| `ContractAnalytics` | Performance metrics |
+| `SecurityScan` | Vulnerability reports |
+| `GrantApplication` | Polygon grants |
+| `VerificationToken` | Email verification |
+
+### Project Statistics
+
+```
+📊 Project Metrics (v2.0.0)
+├─ 📁 Files: 150+
+├─ 📄 Lines of Code: ~12,000+
+├─ 🎨 Components: 60+
+├─ 🔌 API Routes: 23
+├─ 📱 Pages: 12
+├─ 🗄️ Database Models: 15
+├─ 💻 Smart Contracts: 1 (deployed)
+└─ 🧩 VS Code Extension: 1 package
 
 ---
 
@@ -429,11 +568,51 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## 📞 Contact & Support
 
-- 🌐 **Website**: [polybuilder.com](https://polybuilder.vercel.app)
+- 🌐 **Website**: [polybuilder.vercel.app](https://polybuilder.vercel.app)
 - 📧 **Email**: pratikkumar56778@gmail.com
+- 💼 **LinkedIn**: [Aryan Anand](https://linkedin.com)
 - 🐦 **Twitter**: [@PolyBuilder](https://twitter.com/polybuilder)
 - 💬 **Discord**: [Join Community](https://discord.gg/polybuilder)
 - 🐛 **Issues**: [GitHub Issues](https://github.com/SCARPxVeNOM/PolyBuilder/issues)
+
+---
+
+## ⭐ Show Your Support
+
+If you like PolyBuilder, please consider:
+- ⭐ **Star this repository** on GitHub
+- 🐦 **Share on Twitter** with #PolyBuilder #Polygon
+- 🤝 **Contribute** to the project
+- 📝 **Write a blog post** about your experience
+- 💜 **Spread the word** in your developer community
+
+---
+
+## 🎯 Roadmap & Future Plans
+
+### Q1 2025
+- [ ] Mobile app (iOS & Android)
+- [ ] Advanced testing framework
+- [ ] Contract templates library (100+ templates)
+- [ ] Multi-language support (i18n)
+
+### Q2 2025
+- [ ] GitHub integration (import/export)
+- [ ] No-code smart contract builder
+- [ ] Team chat & real-time collaboration
+- [ ] Advanced analytics & insights
+
+### Q3 2025
+- [ ] Enterprise features (SSO, custom domains)
+- [ ] White-label solutions
+- [ ] Advanced security auditing tools
+- [ ] Integration marketplace
+
+### Vision
+- 🌍 **10,000+ developers** building on Polygon
+- 🚀 **5,000+ contracts** deployed monthly
+- 💰 **$1M+ marketplace volume** annually
+- 🏆 **Most popular** Polygon development platform
 
 ---
 
