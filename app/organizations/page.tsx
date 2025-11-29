@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -237,7 +238,9 @@ export default function OrganizationsPage() {
                 <div className="flex items-start justify-between mb-2">
                   <CardTitle className="flex items-center gap-2">
                     {org.logo ? (
-                      <img src={org.logo} alt={org.name} className="w-8 h-8 rounded" />
+                      <div className="relative w-8 h-8 rounded overflow-hidden">
+                        <Image src={org.logo} alt={org.name} fill className="object-cover" />
+                      </div>
                     ) : (
                       <div className="w-8 h-8 rounded bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center text-white font-bold">
                         {org.name[0]}
@@ -268,11 +271,14 @@ export default function OrganizationsPage() {
                   {org.members.slice(0, 3).map((member) => (
                     <div key={member.id} className="relative" title={member.user.name}>
                       {member.user.image ? (
-                        <img
-                          src={member.user.image}
-                          alt={member.user.name}
-                          className="w-8 h-8 rounded-full border-2 border-white dark:border-gray-800"
-                        />
+                        <div className="relative w-8 h-8 rounded-full border-2 border-white dark:border-gray-800 overflow-hidden">
+                          <Image
+                            src={member.user.image}
+                            alt={member.user.name}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
                       ) : (
                         <div className="w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-700 border-2 border-white dark:border-gray-800 flex items-center justify-center text-xs font-medium">
                           {member.user.name[0]}

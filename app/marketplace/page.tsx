@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -37,11 +38,7 @@ export default function MarketplacePage() {
 
   const categories = ["DeFi", "NFT", "Gaming", "Governance", "Token", "Bridge", "Oracle", "Other"];
 
-  useEffect(() => {
-    fetchTemplates();
-  }, [search, category, page]);
-
-  const fetchTemplates = async () => {
+  const fetchTemplates = useCallback(async () => {
     setLoading(true);
     try {
       const params = new URLSearchParams({
@@ -59,7 +56,11 @@ export default function MarketplacePage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [search, category, page]);
+
+  useEffect(() => {
+    fetchTemplates();
+  }, [fetchTemplates]);
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -140,11 +141,14 @@ export default function MarketplacePage() {
               onClick={() => router.push(`/marketplace/${template.id}`)}
             >
               {template.thumbnail ? (
-                <img
-                  src={template.thumbnail}
-                  alt={template.name}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform"
-                />
+                <div className="relative w-full h-48 overflow-hidden">
+                  <Image
+                    src={template.thumbnail}
+                    alt={template.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform"
+                  />
+                </div>
               ) : (
                 <div className="w-full h-48 bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center">
                   <Code size={64} className="text-white opacity-50" />
@@ -191,11 +195,14 @@ export default function MarketplacePage() {
               <CardFooter className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   {template.author.image && (
-                    <img
-                      src={template.author.image}
-                      alt={template.author.name}
-                      className="w-6 h-6 rounded-full"
-                    />
+                    <div className="relative w-6 h-6 rounded-full overflow-hidden">
+                      <Image
+                        src={template.author.image}
+                        alt={template.author.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   )}
                   <span className="text-sm text-gray-600 dark:text-gray-400">
                     {template.author.name}
